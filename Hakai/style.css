@@ -1,0 +1,148 @@
+/* 🌌 Base */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: radial-gradient(circle at top, #1a1333, #0d0b1a);
+  color: #eee;
+}
+
+/* 🔮 Header */
+header {
+  background: rgba(20, 15, 50, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: #c084fc;
+  letter-spacing: 2px;
+  box-shadow: 0 0 20px #7c3aed44;
+}
+
+/* 🔍 Search Bar */
+.search-bar {
+  width: 60%;
+  margin: 20px auto;
+  display: block;
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: #1f1b3a;
+  color: white;
+  font-size: 16px;
+  box-shadow: 0 0 10px #7c3aed33;
+  transition: 0.2s;
+}
+
+.search-bar:focus {
+  box-shadow: 0 0 15px #a855f7aa;
+}
+
+/* 🎮 Grid */
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  grid-auto-rows: 160px;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Default size */
+.game-card {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+/* Bigger cards */
+.game-card.wide {
+  grid-column: span 2;
+}
+
+.game-card.tall {
+  grid-row: span 2;
+}
+
+.game-card.big {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+/* Optional: featured HUGE card */
+.game-card.hero {
+  grid-column: span 3;
+  grid-row: span 2;
+}
+
+/* Make images fill taller cards nicely */
+.game-card img {
+  width: 100%;
+  height: 75%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* 🟪 Game Card */
+.game-card {
+  background: linear-gradient(145deg, #1f1b3a, #15112b);
+  border-radius: 15px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glow border effect */
+.game-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 15px;
+  padding: 2px;
+  background: linear-gradient(45deg, #7c3aed, #a855f7, transparent);
+  -webkit-mask: 
+    linear-gradient(#000 0 0) content-box, 
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+/* Hover effect */
+.game-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 10px 25px #7c3aed55;
+}
+
+/* 🎲 Game Image */
+.game-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 8px;
+}
+
+/* 📝 Game Title */
+.game-card p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #ddd;
+}
+
+/* 🎮 Iframe page */
+iframe {
+  width: 100%;
+  height: 90vh;
+  border: none;
+  background: black;
+}
+
+/* ✨ Scrollbar (optional but nice) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #7c3aed;
+  border-radius: 10px;
+}

@@ -1,0 +1,15 @@
+C:\Users\reaga\Desktop\Hakai\games
+put folder there so for example 
+Amoung Us--------
+index.html
+put images here
+C:\Users\reaga\Desktop\Hakai\assets\images
+in script.js add new games by pressing enter after somthing like this { name: "Cookie Clicker", path: "games/Cookie Clicker/index.html", img: "assets/images/cookiegoated.png" },
+then paste 
+{ name: "Cookie Clicker", path: "games/Cookie Clicker/index.html", img: "assets/images/cookiegoated.png" },
+edit this part           \
+to be what is displayed
+edit this part                                             \
+to tell the code where the index.html is so it can load it
+edit this part                                                                                          \
+to tell the code where the png for the icon of the game is
